@@ -28,8 +28,8 @@ git clone https://github.com/MichelleVlza/Proyecto_COVID_HPCD.git
 Then, take your docker terminal to that directory (Proyecto_COVID_HPCD) and create a container with the Dockerfile, which will install all the tools that we'll need (`nano, curl, unzip, less, pip, tldr, csvkit`), and copy the `Script.sh`. Use the following command to do that...
 
 ```
-docker build -t username/covid_proj .
-docker run -it --name name username/covid_proj
+docker build -t username/imagen .
+docker run -it --name name username/imagen
 ```
 
 
