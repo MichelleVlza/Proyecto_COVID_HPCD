@@ -12,12 +12,18 @@ Let’s get started!
 ### Downloading everything you need
 In order to set the environment for this project you must clone the [Proyecto_COVID_HPCD] (https://github.com/MichelleVlza/Proyecto_COVID_HPCD) repository in Github. It includes a [Dockerfile](https://github.com/MichelleVlza/Proyecto_COVID_HPCD/blob/main/MichelleValenzuela.dockerfile) and a [script](https://github.com/MichelleVlza/Proyecto_COVID_HPCD/blob/main/Script.sh).
 
-Run the Dockerfile, this will cerate an ubuntu container and install all the tools that we need in it (´nano, curl, unzip, less, pip, tldr, csvkit´).
+Run the Dockerfile, this will cerate an ubuntu container and install all the tools that we need in it (`nano, curl, unzip, less, pip, tldr, csvkit`).
 
 Next the docker file will run the Script.sh, this script will do the following:
   -Download the data from the Secretaría de Salud in México.
     
     > ``curl -L -O https://datosabiertos.salud.gob.mx/gobmx/salud/datos_abiertos/datos_abiertos_covid19.zip``
+    
+    
+```
+curl -L -O https://datosabiertos.salud.gob.mx/gobmx/salud/datos_abiertos/datos_abiertos_covid19.zip
+
+```
 
 
   -Unzip the file, feel free to name it as you want.
