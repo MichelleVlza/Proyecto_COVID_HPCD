@@ -14,7 +14,7 @@ Let’s get started!
 ### Downloading everything you need
 
 
-#### You need to have [Docker](https://www.docker.com/products/docker-desktop) and [GIT](https://git-scm.com/download/win) installed in orded to follow up the next instructions. ####
+##### You need to have [Docker](https://www.docker.com/products/docker-desktop) and [GIT](https://git-scm.com/download/win) installed in orded to follow up the next instructions. #####
 
 
 In order to set the environment for this project you must clone the [Proyecto_COVID_HPCD](https://github.com/MichelleVlza/Proyecto_COVID_HPCD) repository in Github. It includes a [Dockerfile](https://github.com/MichelleVlza/Proyecto_COVID_HPCD/blob/main/MichelleValenzuela.dockerfile) and a [Script](https://github.com/MichelleVlza/Proyecto_COVID_HPCD/blob/main/Script.sh).
@@ -32,13 +32,13 @@ docker build -t username/imagen .
 docker run -it --name name username/imagen
 ```
 
-and copy the Script.sh, this script will do the following...
+and copy the `Script.sh`, this script will do the following...
 
 
 ### Cleaning the data
 
 
-The script will:  
+The `Script.sh` will:  
 
   
   - Download the data from the Secretaría de Salud in México.
