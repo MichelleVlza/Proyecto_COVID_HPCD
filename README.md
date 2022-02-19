@@ -16,19 +16,17 @@ Run the Dockerfile, this will cerate an ubuntu container and install all the too
 
 Next the docker file will run the Script.sh, this script will do the following:
   -Download the data from the Secretaría de Salud in México.
-    
-    > ``curl -L -O https://datosabiertos.salud.gob.mx/gobmx/salud/datos_abiertos/datos_abiertos_covid19.zip``
-    
-    
+         
 ```
 curl -L -O https://datosabiertos.salud.gob.mx/gobmx/salud/datos_abiertos/datos_abiertos_covid19.zip
-
 ```
 
 
   -Unzip the file, feel free to name it as you want.
     
-    > ``unzip datos_abiertos_covid19.zip``
+ ```
+ unzip datos_abiertos_covid19.zip
+ ```
 
 
 
@@ -36,16 +34,22 @@ curl -L -O https://datosabiertos.salud.gob.mx/gobmx/salud/datos_abiertos/datos_a
 Use cvskit to clean the data.
   -Select only data from people who live in Sonora.
     
-    > ``csvgrep -c ENTIDAD_RES -m 26 220216COVID19MEXICO.csv > Sonora_data.csv``
+```
+csvgrep -c ENTIDAD_RES -m 26 220216COVID19MEXICO.csv > Sonora_data.csv
+```
 
 
   -Select people who came out positive for COVID-19.
     
-    > ``csvgrep -c RESULTADO_LAB -m 1 Sonora_data.csv > Covid_data.csv``
+```
+csvgrep -c RESULTADO_LAB -m 1 Sonora_data.csv > Covid_data.csv
+```
 
   -Select only the columns we need.
-    
-    > ``csvcut -c 1,2,6,8,10,11,12,13,14,15,16,18,20,21,22,23,24,25,26,27,28,29,30,31,33,40 Covid_data.csv > Sonora_COVID.csv``
+
+```
+csvcut -c 1,2,6,8,10,11,12,13,14,15,16,18,20,21,22,23,24,25,26,27,28,29,30,31,33,40 Covid_data.csv > Sonora_COVID.csv
+```
 
 
 Now you are done, the data is ready for analysis and we are up to the first stage of this project. 
