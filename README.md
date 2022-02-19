@@ -5,9 +5,10 @@
 
 
 
-This is a project to guide you through the process of cleaning data provided by the [***Secretaría de Salud in México***](https://www.gob.mx/salud/documentos/datos-abiertos-152127), as part of the **"[Herramientas para Ciencia de Datos](https://mcd-unison.github.io/curso-hpcd/)"** course, implemented by the [***Universidad of Sonora***](https://www.unison.mx/). 
+This project is part of the **"[Herramientas para Ciencia de Datos](https://mcd-unison.github.io/curso-hpcd/)"** course, implemented by the [***Universidad of Sonora***](https://www.unison.mx/), implementing data provided by the [***Secretaría de Salud in México***](https://www.gob.mx/salud/documentos/datos-abiertos-152127).
 
-All information updated as of today represents the first stage of this project (downloading and preparing the data), This page will guide you through this stage as there is a repository and a script allowing this project to be replicable for anyone who wishes.
+
+All information updated as of today represents the first stage of this project, downloading and preparing the COVID-19 data set for further analysis, this page will guide you through this stage as there is a repository and a script allowing this project to be replicable for anyone.
 
 Let’s get started!
 
