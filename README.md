@@ -14,17 +14,32 @@ Let’s get started!
 ### Downloading everything you need
 
 
-##### You need to have [Docker](https://www.docker.com/products/docker-desktop) and [GIT](https://git-scm.com/download/win) installed in orded to follow up the next instructions. #####
+#### You need to have [Docker](https://www.docker.com/products/docker-desktop) and [GIT](https://git-scm.com/download/win) installed in orded to follow up the next instructions. ####
 
 
-In order to set the environment for this project you must clone the [Proyecto_COVID_HPCD](https://github.com/MichelleVlza/Proyecto_COVID_HPCD) repository in Github. It includes a [Dockerfile](https://github.com/MichelleVlza/Proyecto_COVID_HPCD/blob/main/MichelleValenzuela.dockerfile) and a [script](https://github.com/MichelleVlza/Proyecto_COVID_HPCD/blob/main/Script.sh).
+In order to set the environment for this project you must clone the [Proyecto_COVID_HPCD](https://github.com/MichelleVlza/Proyecto_COVID_HPCD) repository in Github. It includes a [Dockerfile](https://github.com/MichelleVlza/Proyecto_COVID_HPCD/blob/main/MichelleValenzuela.dockerfile) and a [Script](https://github.com/MichelleVlza/Proyecto_COVID_HPCD/blob/main/Script.sh).
+
+```
+git clone https://github.com/MichelleVlza/Proyecto_COVID_HPCD.git
+```
 
 
-Run the Dockerfile, this will cerate an ubuntu container and install all the tools that we need in it (`nano, curl, unzip, less, pip, tldr, csvkit`).
+
+In the same direction create a container with the Dockerfile, which will install all the tools that we'll need (`nano, curl, unzip, less, pip, tldr, csvkit`),
+
+```
+docker build -t username/imagen .
+docker run -it --name name username/imagen
+```
+
+and copy the Script.sh, this script will do the following...
 
 
-Next, the docker file will run the Script.sh, this script will do the following:
-  
+### Cleaning the data
+
+
+The script will:  
+
   
   - Download the data from the Secretaría de Salud in México.
          
@@ -39,11 +54,6 @@ curl -L -O https://datosabiertos.salud.gob.mx/gobmx/salud/datos_abiertos/datos_a
  unzip datos_abiertos_covid19.zip
  ```
 
-
-
-
-### Cleaning the data
-Use cvskit to clean the data.
   
   - Select only data from people who live in Sonora.
     
