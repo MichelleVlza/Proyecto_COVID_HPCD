@@ -5,7 +5,7 @@
 
 
 
-This project is part of the **"[Herramientas para Ciencia de Datos](https://mcd-unison.github.io/curso-hpcd/)"** course, implemented by the [***Universidad of Sonora***](https://www.unison.mx/), implementing data provided by the [***Secretaría de Salud in México***](https://www.gob.mx/salud/documentos/datos-abiertos-152127).
+This project is part of the **"[Herramientas para Ciencia de Datos](https://mcd-unison.github.io/curso-hpcd/)"** course, implemented by the [***Universidad of Sonora***](https://www.unison.mx/), using data provided by the [***Secretaría de Salud in México***](https://www.gob.mx/salud/documentos/datos-abiertos-152127).
 
 
 All information updated as of today represents the first stage of this project, downloading and preparing the COVID-19 data set for further analysis, this page will guide you through this stage as there is a repository and a script allowing this project to be replicable for anyone.
