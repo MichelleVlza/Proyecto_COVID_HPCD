@@ -1,3 +1,4 @@
+#!/bin/sh
 echo "Downloading COVID dataset"
 curl -L -O https://datosabiertos.salud.gob.mx/gobmx/salud/datos_abiertos/datos_abiertos_covid19.zip
 
