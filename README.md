@@ -1,9 +1,5 @@
 
 
-# Sonora COVID-19 Cases Analysis
-
-
-
 
 This project is part of the **"[Herramientas para Ciencia de Datos](https://mcd-unison.github.io/curso-hpcd/)"** course, implemented by the [***Universidad of Sonora***](https://www.unison.mx/), using data provided by the [***Secretaría de Salud in México***](https://www.gob.mx/salud/documentos/datos-abiertos-152127).
 
