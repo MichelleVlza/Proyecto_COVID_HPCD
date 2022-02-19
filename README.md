@@ -2,11 +2,14 @@
 
 # Sonora COVID-19 Cases Analysis
 
-This is a project from the **"[Herramientas para Ciencia de Datos](https://mcd-unison.github.io/curso-hpcd/)"** course implemented by the [***Universidad of Sonora***](https://www.unison.mx/). This page will guide you through the process of cleaning data provided by the [***Secretaría de Salud in México***](https://www.gob.mx/salud/documentos/datos-abiertos-152127). 
 
-All information updated as of today represents the fist stage of this project (downloading and preparing the data). The following lines guide you through this stage as there is a repository and a script allowing this project to be replicable for anyone who wishes.
+
+
+This is a project to guide you through the process of cleaning data provided by the [***Secretaría de Salud in México***](https://www.gob.mx/salud/documentos/datos-abiertos-152127), as part of the **"[Herramientas para Ciencia de Datos](https://mcd-unison.github.io/curso-hpcd/)"** course, implemented by the [***Universidad of Sonora***](https://www.unison.mx/). 
+
+All information updated as of today represents the first stage of this project (downloading and preparing the data), This page will guide you through this stage as there is a repository and a script allowing this project to be replicable for anyone who wishes.
+
 Let’s get started!
-
 
 
 
@@ -17,7 +20,7 @@ Let’s get started!
 ##### You need to have [Docker](https://www.docker.com/products/docker-desktop) and [GIT](https://git-scm.com/download/win) installed in orded to follow up the next instructions. #####
 
 
-In order to set the environment for this project you must clone the [Proyecto_COVID_HPCD](https://github.com/MichelleVlza/Proyecto_COVID_HPCD) repository in Github. It includes a [Dockerfile](https://github.com/MichelleVlza/Proyecto_COVID_HPCD/blob/main/MichelleValenzuela.dockerfile) and a [Script](https://github.com/MichelleVlza/Proyecto_COVID_HPCD/blob/main/Script.sh).
+To set the environment for this project you must clone the [Proyecto_COVID_HPCD](https://github.com/MichelleVlza/Proyecto_COVID_HPCD) repository in Github, it includes a [Dockerfile](https://github.com/MichelleVlza/Proyecto_COVID_HPCD/blob/main/MichelleValenzuela.dockerfile) and a [Script](https://github.com/MichelleVlza/Proyecto_COVID_HPCD/blob/main/Script.sh).
 
 ```
 git clone https://github.com/MichelleVlza/Proyecto_COVID_HPCD.git
@@ -25,14 +28,14 @@ git clone https://github.com/MichelleVlza/Proyecto_COVID_HPCD.git
 
 
 
-In the same direction create a container with the Dockerfile, which will install all the tools that we'll need (`nano, curl, unzip, less, pip, tldr, csvkit`),
+In the same direction create a container with the Dockerfile, which will install all the tools that we'll need (`nano, curl, unzip, less, pip, tldr, csvkit`), and copy the `Script.sh`.
 
 ```
 docker build -t username/imagen .
 docker run -it --name name username/imagen
 ```
 
-and copy the `Script.sh`, this script will do the following...
+
 
 
 ### Cleaning the data
@@ -48,6 +51,7 @@ curl -L -O https://datosabiertos.salud.gob.mx/gobmx/salud/datos_abiertos/datos_a
 ```
 
 
+
   - Unzip the file, feel free to name it as you want.
     
  ```
@@ -55,17 +59,20 @@ curl -L -O https://datosabiertos.salud.gob.mx/gobmx/salud/datos_abiertos/datos_a
  ```
 
   
+  
   - Select only data from people who live in Sonora.
     
 ```
 csvgrep -c ENTIDAD_RES -m 26 220216COVID19MEXICO.csv > Sonora_data.csv
 ```
 
+
   - Select people who came out positive for COVID-19.
     
 ```
 csvgrep -c RESULTADO_LAB -m 1 Sonora_data.csv > Covid_data.csv
 ```
+
 
   - Select only the columns we need.
 
